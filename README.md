@@ -1,1 +1,3 @@
-# infinite-minesweeper-att2
+# txSweeper
+
+An infinitely generative minesweeper game.
