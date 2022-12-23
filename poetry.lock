@@ -61,7 +61,7 @@ jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 
 [[package]]
 name = "textual"
-version = "0.6.0"
+version = "0.5.0"
 description = "Modern Text User Interface framework"
 category = "main"
 optional = false
@@ -90,7 +90,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1cd75de217c3e2760f0e3d773654186527c234a273e2bd3b958767fadc5b6804"
+content-hash = "ba372430fc60a4edf23a8fc78aa5f933ed33f4e5e4100592945cd70dbf59528f"
 
 [metadata.files]
 commonmark = [
@@ -114,8 +114,8 @@ rich = [
     {file = "rich-12.6.0.tar.gz", hash = "sha256:ba3a3775974105c221d31141f2c116f4fd65c5ceb0698657a11e9f295ec93fd0"},
 ]
 textual = [
-    {file = "textual-0.6.0-py3-none-any.whl", hash = "sha256:08236279ed0b53d264f7ac61fd346cace7a49fcc1682ea4d195c3045ac0715bc"},
-    {file = "textual-0.6.0.tar.gz", hash = "sha256:32e901085aaf217290025c4d934c414ef7e203da7d334b80333240e9b867e771"},
+    {file = "textual-0.5.0-py3-none-any.whl", hash = "sha256:d1925f9f019858beaabda8a87cb87fb57cbbf321e948fc3b28d7085e83c8f5ab"},
+    {file = "textual-0.5.0.tar.gz", hash = "sha256:516bf4db05830e70f9806828610a1a00de08068d984d329dbecc8dbef5d71ab7"},
 ]
 zipp = [
     {file = "zipp-3.11.0-py3-none-any.whl", hash = "sha256:83a28fcb75844b5c0cdaf5aa4003c2d728c77e05f5aeabe8e95e56727005fbaa"},

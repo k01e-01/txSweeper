@@ -139,14 +139,15 @@ class View(Static):
         xlim: int = self.app.size.width // 4 - 1
         ylim: int = self.app.size.height // 4
         x = int((event.x + 0.5) // 2) - (xlim + xoffset)
-        y = int((event.y / 2 - (ylim + yoffset / 2)) * 2)
+        y = int((event.y / 2 - (ylim + yoffset / 2)) * 2) - 1
         button = event.button
 
         deltatitle = self.app.title
         self.app.title = "txSweeper - Calculating..."
         await asyncio.sleep(0.01)  # this is needed to update the title
         self.calc(x, y, button)
-        self.app.title = deltatitle
+        if not self.app.gameovered:
+            self.app.title = deltatitle
         if button == 1: self.app.bell()
 
 
@@ -197,6 +198,10 @@ class View(Static):
         if result == 0 and depth < 100: 
             for ny, nx in product(range(y-1, y+2), range(x-1, x+2)):
                 self.calc(nx, ny, self.LEFTMOUSE, depth + 1)
+        
+        if depth == 0:
+            self.calcscore()
+            self.app.update_title()
 
         self.redraw()  # hey!
 
@@ -371,7 +376,10 @@ class txSweeper(App):
         self.title = "txSweeper - Game Over!"
         self.gameovered = True
         
+def main():
+    """Entry point for the application script"""
+    txSweeper().run()
 
 # hello world!
 if __name__ == "__main__":
-    txSweeper().run()
+    main()
